@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biniam Ambachew | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">Biniam <span>Ambachew</span></div>
+
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero">
+      <div class="hero-container">
+        <img src="image.jpg" alt="Biniam Ambachew" class="profile-img" />
+        <h1>Biniam Ambachew</h1>
+        <p>Front-End Developer | Singer | Dreamer</p>
+        <div class="btn-container">
+          <button onclick="window.open('Biniam_Ambachew_Colorful_CV.pdf')">
+            Download CV
+          </button>
+          <button onclick="location.href='#contact'">Contact Info</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="photo_2025-10-20_15-00-57.jpg" alt="Biniam Ambachew" />
+        <p>
+          I’m <strong>Biniam Ambachew</strong> — a passionate singer, front-end
+          developer, and computer science student at Gondar University. I love
+          blending art and technology to express ideas and connect with people
+          through music and digital creativity.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education & Early Life</h2>
+      <div class="education-container">
+        <p>
+          I was born and raised in <strong>Nefas Mewucha</strong>. Growing up in
+          a small town taught me patience, humility, and the value of hard work.
+          These lessons guide me as I pursue my dream of becoming a skilled
+          programmer and musician.
+        </p>
+        <p>
+          I am currently studying <strong>Computer Science</strong> at
+          <strong>Gondar University</strong>, where I’m building my knowledge in
+          programming, algorithms, and software development — combining logic
+          and creativity to make meaningful projects.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects & Skills</h2>
+      <div class="projects-container">
+        <p>
+          As a front-end developer, I create modern, interactive websites that
+          connect art and technology. My focus is on clean design and meaningful
+          storytelling through code.
+        </p>
+        <h3>Technical Skills</h3>
+        <ul class="skills-list">
+          <li>💻 HTML, CSS, JavaScript</li>
+          <li>⚙️ React.js & Responsive Web Design</li>
+          <li>🖥️ C++ Programming</li>
+          <li>🗄️ Basic SQL & Database Handling</li>
+          <li>🎨 UI/UX Design with Figma</li>
+          <li>🔧 Git & GitHub Collaboration</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="music">
+      <h2>Music Journey</h2>
+      <p>
+        Music is my soul’s language. I compose songs that tell stories about
+        life, faith, and dreams. My goal is to inspire others and bring light
+        through rhythm and emotion.
+      </p>
+      <p>
+        🎵 Check out my YouTube channel:
+        <a href="https://www.youtube.com/@BINIAMAMBACHEW-f1e" target="_blank">
+          youtube.com/@biniamambachew
+        </a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-form">
+        <form id="contactForm">
+          <table>
+            <tr>
+              <td><label for="name">Name:</label></td>
+              <td><input type="text" id="name" name="name" required /></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input type="email" id="email" name="email" required /></td>
+            </tr>
+            <tr>
+              <td><label for="password">Password:</label></td>
+              <td>
+                <input type="password" id="password" name="password" required />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <button type="submit">Contact Me</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <p id="contactMessage" class="success-message">
+        ✅ Thank you for contacting me! I’ll get back to you soon.
+      </p>
+
+      <p class="contact-info">
+        📞 Phone: 0932745936<br />
+        📧 Email:
+        <a href="mailto:biniamambachew795@gmail.com"
+          >biniamambachew795@gmail.com</a
+        ><br />
+        🌍 Location: Gondar University, Ethiopia
+      </p>
+    </section>
+
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navLinks = document.getElementById("nav-links");
+      const navItems = document.querySelectorAll(".nav-links li a");
+
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
